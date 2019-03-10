@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ScreeningActivity"
+    tools:showIn="@layout/activity_screening">
+
+    <TextView
+        android:id="@+id/textView_user"
+        android:layout_width="51dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="16dp"
+        android:autoText="false"
+        android:gravity="center_vertical"
+        android:text="사용자"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_name"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:hint="@string/name_edit_hint_activity_screening"
+        android:inputType="textPersonName"
+        android:text="@string/name_edit_text_activity_screening"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView_user"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_date"
+        android:layout_width="53dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical"
+        android:text="날짜"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_user" />
+
+    <EditText
+        android:id="@+id/editText_date"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:hint="날짜를 선택해주세요"
+        android:inputType="date"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.009"
+        app:layout_constraintStart_toEndOf="@+id/textView_date"
+        app:layout_constraintTop_toBottomOf="@+id/editText_name" />
+
+    <TextView
+        android:id="@+id/textView_picture"
+        android:layout_width="150dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical"
+        android:text="사진을 선택해주세요"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.034"
+        app:layout_constraintStart_toEndOf="@+id/btn_select_picture"
+        app:layout_constraintTop_toBottomOf="@+id/ageSpinner" />
+
+    <Button
+        android:id="@+id/btn_select_picture"
+        android:layout_width="87dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_vertical"
+        android:text="사진 선택"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.107"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="46dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical"
+        android:text="연령대"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_date" />
+
+    <Spinner
+        android:id="@+id/ageSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="10dp"
+        android:entries="@array/ages_array"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/editText_date" />
+
+    <Button
+        android:id="@+id/bnt_screening"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/colorPrimary"
+        android:text="검사"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.465"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/imageView_screening"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bnt_screening"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="176dp"
+        android:layout_marginEnd="16dp"
+        android:text="조정"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.753"
+        app:layout_constraintStart_toEndOf="@+id/bnt_screening"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
